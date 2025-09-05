@@ -1,0 +1,42 @@
+/* Inputs stylisés */
+.input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.15);
+  background: #10132d;
+  color: var(--text);
+  transition: border .2s;
+}
+.input:focus { border-color: var(--accent); outline: none; }
+
+/* Alignement des boutons dans le popup */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Animation popup */
+.modal-content {
+  background: var(--card);
+  padding: 24px;
+  border-radius: var(--radius);
+  max-width: 400px;
+  width: 100%;
+  transform: scale(.8);
+  opacity: 0;
+  animation: zoomIn .3s forwards;
+}
+.modal.hidden .modal-content {
+  animation: zoomOut .3s forwards;
+}
+
+@keyframes zoomIn {
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes zoomOut {
+  to { transform: scale(.8); opacity: 0; }
+}

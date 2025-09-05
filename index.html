@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriveInternat — Boutique</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <div class="brand">
+        <div class="logo"></div>
+        <h1>DriveInternat</h1>
+      </div>
+      <div class="right">
+        <button class="btn" id="cart-btn">Panier (<span id="cart-count">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Nos Articles</h2>
+    <div id="products" class="grid"></div>
+  </main>
+
+  <!-- Panier -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Votre Panier</h3>
+      <ul id="cart-items"></ul>
+      <p class="total">Total : <span id="cart-total">0€</span></p>
+      <button class="btn success" id="checkout-btn">Acheter</button>
+      <button class="btn danger" id="close-cart">Fermer</button>
+    </div>
+  </div>
+
+  <!-- Popup utilisateur -->
+  <div id="user-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Informations client</h3>
+      <input id="user-name" class="input" type="text" placeholder="Votre nom">
+      <input id="user-room" class="input" type="text" placeholder="Numéro de chambre">
+      <div class="actions">
+        <button class="btn success" id="confirm-user">Valider</button>
+        <button class="btn danger" id="cancel-user">Annuler</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notifications -->
+  <div id="notifications"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
